@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WDC-8D-SRq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Found" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xh1-Hv-GQC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oem-RI-e1F">
+                                <rect key="frame" x="10" y="10" width="50" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Drop"/>
+                                <connections>
+                                    <action selector="dropPinTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AdT-PM-1OO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOr-Bm-ewu">
+                                <rect key="frame" x="345" y="334" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6hL-Tl-DVD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OG-QR-788">
+                                <rect key="frame" x="345" y="305" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AbD-Az-D80"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpg-9j-sjX">
+                                <rect key="frame" x="335" y="267" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Drop"/>
+                                <connections>
+                                    <action selector="showDropPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E64-7C-YC1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9D-xK-IEb">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Drop"/>
+                                <connections>
+                                    <action selector="dropPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yzr-pc-J2l"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin.png" translatesAutoresizingMaskIntoConstraints="NO" id="moI-H0-mJN">
+                                <rect key="frame" x="157" y="336" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xh1-Hv-GQC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="AcA-T5-LOu"/>
+                            <constraint firstItem="Xh1-Hv-GQC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D7s-RN-fcN"/>
+                            <constraint firstAttribute="trailing" secondItem="Xh1-Hv-GQC" secondAttribute="trailing" id="Qff-6r-S15"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xh1-Hv-GQC" secondAttribute="bottom" constant="-44" id="kBe-2O-xzR"/>
+                            <constraint firstItem="Xh1-Hv-GQC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="oAQ-g5-q5b"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="258-Zu-ZAO">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="15l-VI-FyG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fgV-RQ-uyI">
+                                <rect key="frame" x="16" y="7" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Location"/>
+                                <connections>
+                                    <action selector="location:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDT-ZR-f9f"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d8A-Q6-zlg">
+                            <rect key="frame" x="155.5" y="6" width="64" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelDropPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D9f-8Q-Qw3"/>
+                            </connections>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="QRf-rM-czt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gx1-Ta-2ZZ">
+                                <rect key="frame" x="259" y="2" width="100" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="h8r-C3-DE3" kind="show" id="6wh-nT-I76"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cancelDropPinButton" destination="d8A-Q6-zlg" id="lJ8-lz-8xR"/>
+                        <outlet property="dropPinButton" destination="N9D-xK-IEb" id="N0U-vq-KWz"/>
+                        <outlet property="dropPinButton1" destination="gpg-9j-sjX" id="AQL-St-Vuw"/>
+                        <outlet property="imageView" destination="moI-H0-mJN" id="NPC-ry-thn"/>
+                        <outlet property="locationButton" destination="15l-VI-FyG" id="ZkH-yg-dha"/>
+                        <outlet property="mapView" destination="Xh1-Hv-GQC" id="WnM-iO-9BD"/>
+                        <outlet property="settingsButton" destination="QRf-rM-czt" id="FaK-QI-r2y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6391.1999999999998" y="208.24587706146929"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="u2N-Vu-TjS">
+            <objects>
+                <viewController id="h8r-C3-DE3" customClass="SettingsViewController" customModule="Found" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sf3-3o-Ym8"/>
+                        <viewControllerLayoutGuide type="bottom" id="0A7-z8-GVH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L82-aJ-Iru">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Rc-3I-ejO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="AmQ-XF-seN">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="nhv-lr-oVc"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="621-i3-xuF">
+                                <rect key="frame" x="16" y="72" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Standart"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="h8r-C3-DE3" eventType="valueChanged" id="EJt-gv-q29"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="621-i3-xuF" firstAttribute="top" secondItem="sf3-3o-Ym8" secondAttribute="bottom" constant="5" id="K9k-Kh-fA8"/>
+                            <constraint firstItem="621-i3-xuF" firstAttribute="leading" secondItem="L82-aJ-Iru" secondAttribute="leadingMargin" constant="5" id="oW6-Qv-nWG"/>
+                            <constraint firstItem="621-i3-xuF" firstAttribute="trailing" secondItem="L82-aJ-Iru" secondAttribute="trailingMargin" constant="5" id="vEA-gx-zGk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="ccx-La-i7p">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="IV9-D9-nvo"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="621-i3-xuF" id="oce-5J-1LY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydL-PN-HTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7103.1999999999998" y="207.34632683658174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pKG-xt-wsA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WDC-8D-SRq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vZG-3V-lBh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GUi-z2-Yhy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lb-cd-QtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5452" y="208.24587706146929"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pin.png" width="60" height="60"/>
+    </resources>
+</document>
