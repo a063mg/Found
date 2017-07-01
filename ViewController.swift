@@ -43,7 +43,7 @@ class ViewController: UIViewController, MKMapViewDelegate, SetBack{
         self.cancelDropPinButton.isHidden = true
         self.imageView.isHidden = true
         
-        self.imageView.center = CGPoint(x: mapView.center.x, y: mapView.center.y + 31)
+        self.imageView.center = CGPoint(x: mapView.center.x, y: mapView.center.y + 31.5)
         
             self.imageView.setNeedsDisplay()
         
@@ -73,35 +73,7 @@ class ViewController: UIViewController, MKMapViewDelegate, SetBack{
             default:
                 curMapType = 0
         }
-        
-//        if type == 0{
-//            mapView.mapType = .standard
-//        }
-//        else if type == 1{
-//            mapView.mapType = .satellite
-//        }
-//        else if type == 2{
-//            mapView.mapType = .hybrid
-//        }
-//        else{
-//            mapView.mapType = .standard
-//        }
-        
-        
-//        if  mapView.mapType == .standard{
-//            curMapType = 0
-//        }
-//        else if  mapView.mapType == .satellite{
-//            curMapType = 1
-//        }
-//        else if  mapView.mapType == .hybrid{
-//            curMapType = 2
-//        }
-//        else {
-//            curMapType = 0
-//            
-//        }
-        
+      
     }
 
     
@@ -154,8 +126,6 @@ class ViewController: UIViewController, MKMapViewDelegate, SetBack{
         self.dropPinButton.isHidden = false
         self.imageView.isHidden = false
         
-//        self.mapView.setRegion(region, animated: true)
-        
         self.navigationItem.leftBarButtonItem?.customView?.isHidden = true
         self.navigationItem.rightBarButtonItem?.customView?.isHidden = true
 
@@ -167,8 +137,6 @@ class ViewController: UIViewController, MKMapViewDelegate, SetBack{
         self.cancelDropPinButton.isHidden = true
         self.imageView.isHidden = true
         
-//        self.mapView.setRegion(region, animated: true)
-        
         self.navigationItem.leftBarButtonItem?.customView?.isHidden = false
         self.navigationItem.rightBarButtonItem?.customView?.isHidden = false
     }
@@ -178,8 +146,6 @@ class ViewController: UIViewController, MKMapViewDelegate, SetBack{
         self.cancelDropPinButton.isHidden = true
         self.dropPinButton.isHidden = true
         self.imageView.isHidden = true
-        
-//        self.mapView.setRegion(region, animated: true)
         
         self.navigationItem.leftBarButtonItem?.customView?.isHidden = false
         self.navigationItem.rightBarButtonItem?.customView?.isHidden = false
@@ -194,14 +160,14 @@ class ViewController: UIViewController, MKMapViewDelegate, SetBack{
         print(self.mapView.region.center)
     }
     
-    @IBAction func minus(_ sender: Any) {
+    @IBAction func ZoomIn(_ sender: Any) {
         let span = MKCoordinateSpanMake( self.mapView.region.span.latitudeDelta / 2,  self.mapView.region.span.longitudeDelta / 2)
         let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: self.mapView.camera.centerCoordinate.latitude, longitude: self.mapView.camera.centerCoordinate.longitude)
         let curRegion = MKCoordinateRegionMake(coordinate, span)
         self.mapView.setRegion(curRegion, animated: true)
     }
     
-    @IBAction func plus(_ sender: Any) {
+    @IBAction func ZoomOut(_ sender: Any) {
         if  self.mapView.region.span.latitudeDelta < 90 &&  self.mapView.region.span.longitudeDelta < 90  {
         let span = MKCoordinateSpanMake( self.mapView.region.span.latitudeDelta * 2,  self.mapView.region.span.longitudeDelta * 2)
         let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: self.mapView.camera.centerCoordinate.latitude, longitude: self.mapView.camera.centerCoordinate.longitude)
