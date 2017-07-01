@@ -73,35 +73,7 @@ class ViewController: UIViewController, MKMapViewDelegate, SetBack{
             default:
                 curMapType = 0
         }
-        
-//        if type == 0{
-//            mapView.mapType = .standard
-//        }
-//        else if type == 1{
-//            mapView.mapType = .satellite
-//        }
-//        else if type == 2{
-//            mapView.mapType = .hybrid
-//        }
-//        else{
-//            mapView.mapType = .standard
-//        }
-        
-        
-//        if  mapView.mapType == .standard{
-//            curMapType = 0
-//        }
-//        else if  mapView.mapType == .satellite{
-//            curMapType = 1
-//        }
-//        else if  mapView.mapType == .hybrid{
-//            curMapType = 2
-//        }
-//        else {
-//            curMapType = 0
-//            
-//        }
-        
+      
     }
 
     
@@ -174,8 +146,6 @@ class ViewController: UIViewController, MKMapViewDelegate, SetBack{
         self.cancelDropPinButton.isHidden = true
         self.dropPinButton.isHidden = true
         self.imageView.isHidden = true
-        
-//        self.mapView.setRegion(region, animated: true)
         
         self.navigationItem.leftBarButtonItem?.customView?.isHidden = false
         self.navigationItem.rightBarButtonItem?.customView?.isHidden = false
